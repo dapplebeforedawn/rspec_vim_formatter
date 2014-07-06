@@ -34,7 +34,7 @@ nnoremap <Leader>specn :call RunNearestSpec()<CR>
 nnoremap <Leader>spec :call RunLastSpec()<CR>
 nnoremap <Leader>a :call RunAllSpecs()<CR>
 
-" <leader>t to open the spec output in quickfix
+" <leader>k to open the spec output in quickfix
 map <leader>k :cg quickfix.out \| cw<cr>
 
 " dump the spec running command into a fifo
@@ -44,6 +44,7 @@ let g:rspec_command = "echom system('echo \"" . rspec_command . rspec_options . 
 ```
 
 ```sh
+# run the commands from the fifo in a loop
 mkfifo ~/.wrench
 while true; do cmd=`cat ~/.wrench`; clear; date +%s; echo "$cmd"; sh -c "$cmd"; done
 ```

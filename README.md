@@ -50,7 +50,7 @@ while true; do cmd=`cat ~/.wrench`; clear; date +%s; echo "$cmd"; sh -c "$cmd"; 
 
 Now you can `<leader>t`, to run the current spec asynchronously, and `<leader>k` to quickly jump to the failure!
 
-![rspec_vim_formatter]()
+![rspec_vim_formatter](https://raw.githubusercontent.com/dapplebeforedawn/rspec_vim_formatter/master/image/rspec_vim_formatter.gif)
 
 ## Contributing
 

@@ -7,8 +7,26 @@ Gem::Specification.new do |spec|
   spec.version       = "0.0.1"
   spec.authors       = ["Mark Lorenz"]
   spec.email         = ["markjlorenz@dapplebeforedawn.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{output from rspec in VIMs quickfix format}
+  spec.summary       = <<-SUMMARY
+```
+# running this command
+bundle exec rspec --format RspecVimFormatter --out quickfix.out --format progress
+```
+
+```
+# produces this quickfix.out
+app/controllers/people_controller.rb:5: GET /peopleworks! (now write some real specs): Could not find table 'people'
+```
+
+Now you can load it in vim:
+```
+:cg quickfix.out
+:cw
+```
+
+see `:help cw` for more information about VIM's quickfix
+  SUMMARY
   spec.homepage      = ""
   spec.license       = "MIT"
 
